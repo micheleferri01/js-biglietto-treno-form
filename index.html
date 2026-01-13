@@ -14,22 +14,43 @@
 </head>
 <body>
     <h1>Calcola il tuo biglietto</h1>
-    <form id="ticket-form">
-        <div>
+    <form id="ticket-form" class="row g-5">
+        <div class="col-4">
             <label for="chilometri">Km da percorrere</label>
-            <input type="number" id="chilometri" name="chilometri">
+            <input type="number" id="kilometri" name="kilometri" class="form-control">
         </div>
-        <div>
+        <div class="col-4">
             <label for="age">Età</label>
-            <select name="age" id="age">
+            <select name="age" id="age" class="form-control">
                 <option value="">Seleziona</option>
                 <option value="minorenne">Minorenne</option>
                 <option value="maggiorenne">Maggiorenne</option>
                 <option value="over65">Over 65</option>
             </select>
         </div>
-        <button id= "invio-dati" >Calcola</button>
+        <div class="col-12">
+            <button id= "invio-dati" class="btn btn-primary">Calcola</button>
+        </div>
     </form>
+    <div id="ticket" class="d-none">
+        <h2>Il tuo biglietto</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Km da percorrere</th>
+                    <th>Età</th>
+                    <th>Prezzo biglietto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="km"></td>
+                    <td id="age-category"></td>
+                    <td id="prezzo"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
