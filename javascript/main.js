@@ -6,7 +6,6 @@ ticketForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let kil = kilInput.value;
     let age = ageInput.value;
-    console.log(typeof kil);
     console.log(`Kilometri da percorrere: ${kil} Km`);
     console.log("Età:", age);
     const priceForUser = price();
@@ -17,14 +16,15 @@ ticketForm.addEventListener("submit", (e) => {
     const finalPrice = document.getElementById("prezzo");
 
     if(!kil || !age){
-        ticket.classList.add("d-none");
+        Kilometri.innerText = "";
+        ageCategory.innerText = "";
+        finalPrice.innerText = "";
         return;
     }
 
     Kilometri.innerText = `${kil} Km`;
     ageCategory.innerText = `${age}`;
     finalPrice.innerText = `${priceForUser} €`;
-    ticket.classList.remove("d-none");
 
     kilInput.value = "";
     ageInput.value = "";
@@ -34,13 +34,13 @@ ticketForm.addEventListener("submit", (e) => {
 function price() {
     const pricePerKil = 0.21;
     const basePrice = (pricePerKil * kilInput.value).toFixed(2);
-    if (age.value === "minorenne") {
+    if (age.value === "Minorenne") {
         return discountForMinor(basePrice);
     }
-    if (age.value === "maggiorenne") {
+    if (age.value === "Maggiorenne") {
         return basePrice;
     }
-    if (age.value === "over65") {
+    if (age.value === "Over 65") {
         return discountForOver65(basePrice);
     }
 }

@@ -13,28 +13,32 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1>Calcola il tuo biglietto</h1>
-    <form id="ticket-form" class="row g-5">
-        <div class="col-4">
-            <label for="chilometri">Km da percorrere</label>
-            <input type="number" id="kilometri" name="kilometri" class="form-control">
-        </div>
-        <div class="col-4">
-            <label for="age">Età</label>
-            <select name="age" id="age" class="form-control">
-                <option value="">Seleziona</option>
-                <option value="minorenne">Minorenne</option>
-                <option value="maggiorenne">Maggiorenne</option>
-                <option value="over65">Over 65</option>
-            </select>
-        </div>
-        <div class="col-12">
-            <button id= "invio-dati" class="btn btn-primary">Calcola</button>
-        </div>
-    </form>
-    <div id="ticket" class="d-none">
-        <h2>Il tuo biglietto</h2>
-        <table class="table">
+    <div class="bg">
+        <h1 class="text-center tx-color m-0">Calcola il tuo biglietto</h1>
+    </div>
+    <div class="bg-form">
+        <form id="ticket-form" class="form-position">
+            <div>
+                <label for="kilometri" class="text-white">Km da percorrere</label>
+                <input type="number" id="kilometri" name="kilometri" class="form-control input-width">
+            </div>
+            <div>
+                <label for="age" class="text-white">Età</label>
+                <select name="age" id="age" class="form-control input-width">
+                    <option value="">Seleziona</option>
+                    <option value="Minorenne">Minorenne</option>
+                    <option value="Maggiorenne">Maggiorenne</option>
+                    <option value="Over 65">Over 65</option>
+                </select>
+            </div>
+            <div>
+                <button id= "invio-dati" class="btn btn-primary">Calcola</button>
+            </div>
+        </form>
+    </div>
+    <div class="text-center train-ticket bg pb-5">
+        <h2 class="pb-3 tx-color">Il tuo biglietto</h2>
+        <table class="custom-table">
             <thead>
                 <tr>
                     <th>Km da percorrere</th>
@@ -42,7 +46,7 @@
                     <th>Prezzo biglietto</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="ticket">
                 <tr>
                     <td id="km"></td>
                     <td id="age-category"></td>
