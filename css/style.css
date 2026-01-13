@@ -35,7 +35,7 @@ header{
 }
 
 .input-width {
-    width: 400px;
+    width: 150px;
     box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.274);
 }
 
@@ -61,4 +61,11 @@ td,th{
 
 .bg{
     background-color: rgb(5, 193, 239);
+}
+
+/* media query */
+@media screen and (min-width: 400px){
+    .input-width{
+        width: 400px;
+    }
 }
