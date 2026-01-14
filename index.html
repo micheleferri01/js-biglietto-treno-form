@@ -19,6 +19,10 @@
     <div class="bg-form">
         <form id="ticket-form" class="form-position">
             <div>
+                <label for="name" class="text-white">Nome e cognome</label>
+                <input type="text" id="name" name="name" class="form-control input-width">
+            </div>
+            <div>
                 <label for="kilometri" class="text-white">Km da percorrere</label>
                 <input type="number" id="kilometri" name="kilometri" class="form-control input-width">
             </div>
@@ -38,9 +42,10 @@
     </div>
     <div class="text-center train-ticket bg pb-5">
         <h2 class="pb-3 tx-color">Il tuo biglietto</h2>
-        <table class="custom-table">
+        <table class="custom-table visually-hidden" id="ticket">
             <thead>
                 <tr>
+                    <th>Nome passeggero</th>
                     <th>Km da percorrere</th>
                     <th>Età</th>
                     <th>Prezzo biglietto</th>
@@ -48,6 +53,7 @@
             </thead>
             <tbody id="ticket">
                 <tr>
+                    <td id="passenger-name"></td>
                     <td id="km"></td>
                     <td id="age-category"></td>
                     <td id="prezzo"></td>

@@ -22,7 +22,7 @@ header{
     background-image: url('../img/train2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: calc(73vh - 96px);
+    height: calc(100% - 96px -223px);
 }
 
 .form-position {
@@ -30,7 +30,7 @@ header{
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    padding: 10% 0;
+    padding: 6% 0;
     gap: 50px;
 }
 
